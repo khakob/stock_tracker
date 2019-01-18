@@ -13,7 +13,7 @@ class Stock < ApplicationRecord
 
       price = strip_commas(looked_up_stock.l)
       new(name: looked_up_stock.name, ticker: looked_up_stock.symbol, last_price: price)
-    rescue Exception => e
+    rescue => e
       return nil
     end
   end
